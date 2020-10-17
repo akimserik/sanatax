@@ -1,18 +1,30 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <b-jumbotron class="text-left mb-0 vh-100">
+    <template v-slot:header
+      ><h1>Путеводитель по налогам Казахстана</h1></template
+    >
+    <template v-slot:lead>
+      Поиск решений в формате "вопрос-ответ"
+    </template>
+
+    <hr class="my-4" />
+
+    <p>
+      Меня интересует вопрос налогообложения:
+    </p>
+
+    <b-button variant="info" to="/contents" class="mr-2"
+      >Юридических лиц</b-button
+    >
+    <b-button variant="info" to="/contents" class="mr-2"
+      >Физических лиц</b-button
+    >
+  </b-jumbotron>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "Home",
-  components: {
-    HelloWorld
-  }
+  components: {},
 };
 </script>
